@@ -1,0 +1,44 @@
+.result {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+
+    position: relative;
+    width: 70%;
+    /* Set the desired width for the image wrapper */
+    height: 10%;
+    /* background-color: #ffffff;  */
+    overflow: hidden;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+
+}
+
+.r-text{
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    animation: neon-glow 1s ease-in-out infinite alternate;
+    
+    
+  }
+.image img {
+    display: block;
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 100%;
+    /* Set the width of the image to 100% of the image wrapper */
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid #333;
+    /* Set the desired border properties */
+    border-radius: 10px;
+
+}
