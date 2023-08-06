@@ -18,7 +18,7 @@ def index():
     image.save(image_path)
     im=cv2.imread(image_path)
     label=pred(image_path)
-    grayscale_image22 = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    grayscale_image_akshay = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     print(im.shape)    
 
    

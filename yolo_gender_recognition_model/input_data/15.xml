@@ -1,0 +1,26 @@
+<annotation>
+	<folder>input_data</folder>
+	<filename>15.jpg</filename>
+	<path>C:\Users\akshay\Desktop\Projects\p06-react-python-flask-deep-learning-ai\yolo_gender_recognition_model\input_data\15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>828</width>
+		<height>828</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>women</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>103</xmin>
+			<ymin>20</ymin>
+			<xmax>589</xmax>
+			<ymax>570</ymax>
+		</bndbox>
+	</object>
+</annotation>

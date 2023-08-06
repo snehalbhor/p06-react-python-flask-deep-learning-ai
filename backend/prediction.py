@@ -21,21 +21,24 @@ def pred(image_path):
     # args = vars(ap.parse_args())
 
     # load the COCO class labels our YOLO model was trained on
-    labelsPath = 'yolo-coco\coco.names'
-    LABELS = open(labelsPath).read().strip().split("\n")
-    print(LABELS)
+    # labelsPath = 'yolo-coco\coco.names'
+    # LABELS = open(labelsPath).read().strip().split("\n")
+    # print(LABELS)
     
-    LABELS=["CAR","CAR"]
+    LABELS=["MAN","WOMEN"]
     
 
     # initialize a list of colors to represent each possible class label
     np.random.seed(42)
+    im=cv2.imread(image_path)
+    print(im.shape)
+    print(cv2.__version__)
     COLORS = np.random.randint(0, 255, size=(len(LABELS), 3),
         dtype="uint8")
 
     # derive the paths to the YOLO weights and model configuration
-    weightsPath = 'yolo_number.weights'
-    configPath = 'yolo_number.cfg'
+    weightsPath = 'Gender-yolov4-tiny-detector.weights'
+    configPath = 'Gender-yolov4-tiny-detector.cfg'
 
     # load our YOLO object detector trained on COCO dataset (80 classes)
     print("[INFO] loading YOLO from disk...")
@@ -123,7 +126,7 @@ def pred(image_path):
             cv2.rectangle(image, (x, y), (x + w, y + h), color, 2)
             text = "{}: {:.4f}".format(LABELS[classIDs[i]], confidences[i])
             cv2.putText(image, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX,
-                0.5, color, 2)
+                0.5, color, 1)
 
     # # show the output image
     # cv2.imshow("Image", image)
@@ -134,3 +137,5 @@ def pred(image_path):
     return text
     
     
+image_path="a.jpg"
+pred(image_path)
